@@ -1,0 +1,35 @@
+
+<div class="jumbotron py-3">
+    <h1 class="display-4 text-center">Payment Detail Register</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <app-payment-detail-form></app-payment-detail-form>
+    </div>
+    <div class="col-md-6">
+         <span>list of payment details</span>
+    </div>
+</div>
+<table class="table table-warning table-striped">
+    <thead class="table-info">
+        <tr>
+            
+            <th>Card owner Name</th>
+            <th>Card Number</th>
+            <th>exp date</th>
+
+
+        </tr>
+
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let payment of paymentDetail">
+            <td>{{payment.cardOwnerName}}</td>
+            <td>{{payment.cardNumber}}</td>
+            <td>{{payment.expirationDate}}</td>
+            
+        </tr>
+    </tbody>
+</table>

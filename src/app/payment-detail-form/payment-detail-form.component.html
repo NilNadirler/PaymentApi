@@ -1,0 +1,32 @@
+<form [formGroup]="cardAddForm">
+    <input type="hidden" 
+    [value]="paymentDetail.paymentDetailId"/>
+    <div class="form-group">
+        <label>CARD OWNER NAME</label>
+        <input class="form-control " placeholder="Full Name"
+        formControlName="cardOwnerName"  [(ngModel)]="paymentDetail.cardOwnerName"
+      
+       >
+    </div>
+    <div class="form-group">
+        <label>CARD NUMBER</label>
+        <input class="form-control " placeholder="16 Digit Card Number"
+        formControlName="cardNumber" [(ngModel)]="paymentDetail.cardNumber">
+    </div>
+    <div class="row mb-2">
+        <div class="form-group col-md-6" >
+            <label>SECURITY CODE</label>
+            <input class="form-control" placeholder="Security Code"
+            formControlName="securityCode" [(ngModel)]="paymentDetail.securityCode" >
+        </div>
+        <div class="form-group col-md-6">
+            <label>VALID DATE</label>
+            <input class="form-control" placeholder="MM/YY"
+            formControlName="expirationDate" [(ngModel)]="paymentDetail.expirationDate">
+        </div>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary text-white btn-lg d-block w-100" type="submit" (click)="submit()" >SUBMIT</button>
+    </div>
+   
+</form>
